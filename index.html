@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum de Hector J Mendez Novas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="iphone">
+        <div class="iphone-buttons">
+            <div class="power-button" onclick="togglePower()"></div>
+            <div class="volume-buttons">
+                <div class="volume-up" onclick="volumeUp()"></div>
+                <div class="volume-down" onclick="volumeDown()"></div>
+            </div>
+        </div>
+        <div class="screen" id="screen">
+            <div class="app" onclick="openApp(1)"><img src="logosapps/curriculum.png"
+                    alt="App 1 Logo"><span>Curriculum</span></div>
+            <div class="app" onclick="openApp(2)"><img src="logosapps/lenguajes.png"
+                    alt="App 2 Logo"><span>Lenguajes</span></div>
+            <div class="app" onclick="openApp(3)"><img src="logosapps/calculadora.png" alt="App 3 Logo"><span>Calculadora</span></div>
+            <div class="app"><img src="logosapps/imagenes.png" alt="App 4 Logo"><span>Imagenes</span></div>
+            <div class="app" ><img src="logosapps/calendario.png" alt="App 5 Logo"><span>Calendario</span></div>
+            <div class="app">
+                <a href="https://www.instagram.com/hecmendez9?igsh=N3NoazFhOFB1YnZ5">
+                    <img src="logosapps/instagram.png" alt="App 6 Logo">
+                    <span>Instagram</span>
+                </a>
+            </div>
+            <div class="app">
+                <a href="https://wa.me/18492204283">
+                    <img src="logosapps/whatsapp.png" alt="App 7 Logo">
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+            <div class="app">
+                <a href="https://www.tiktok.com/@hecmendez01">
+                    <img src="logosapps/tiktok.jpg" alt="App 8 Logo">
+                    <span>TikTok</span>
+                </a>
+            </div>
+            <div class="app"><img src="logosapps/GitHub.png" alt="App 9 Logo"><span>GitHub</span></div>
+            <div class="app">
+                <a href="https://mail.google.com/mail/u/1/#inbox?compose=SxfkdtxbMbXbbSZHCqxKTjxXhzTlRzwkMKBnkJQHFFWvlMxfkvRMQzwKGNfMMGBVDLzlRTGqmBsMQTbTrMcMcjRmPhqbGzNRtzpsDTGDRhTVGsRXlBq">
+                    <img src="logosapps/gmail.png" alt="App 10 Logo">
+                    <span>GMAIL</span>
+                </a>
+            </div>
+            <div class="app"><img src="logosapps/configuaracion.png" alt="App 10 Logo"><span>Configuración</span></div>
+        </div>
+    </div>
+    
+    <div class="modal" id="modal">
+        <div class="modal-content" id="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+

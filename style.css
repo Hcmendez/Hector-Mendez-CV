@@ -1,0 +1,222 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    background: #605439;
+}
+
+.iphone {
+    width: 300px;
+    height: 600px;
+    border: 16px solid black;
+    border-radius: 36px;
+    position: relative;
+    background: url('fondo/androidrain.webp');
+    background-size: cover;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.iphone-buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.power-button, .volume-buttons {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7); /* Color del botón */
+    border: 1px solid rgba(0, 0, 0, 0.3); /* Borde del botón */
+    border-radius: 50%; /* Forma circular */
+    width: 40px; /* Ancho del botón */
+    height: 40px; /* Altura del botón */
+    display: flex; /* Permite centrar contenido verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    cursor: pointer; /* Cursor al pasar sobre el botón */
+    transition: background-color 0.3s, transform 0.3s; /* Animación al cambiar de color y tamaño */
+}
+
+.power-button {
+    top: 50px; /* Ajusta la posición vertical */
+    right: -50px; /* Ajusta la posición horizontal */
+}
+
+.volume-buttons {
+    top: 50px; /* Ajusta la posición vertical */
+    left: -50px; /* Ajusta la posición horizontal */
+}
+
+.volume-up, .volume-down {
+    margin-bottom: 10px; /* Ajusta el margen inferior */
+}
+
+.screen {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    height: calc(100% - 40px);
+    box-sizing: border-box;
+    background-image: url('iphone-bg.jpg');
+    /* Imagen de fondo del iPhone */
+    background-size: cover;
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.app {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 10px;
+    display: flex; /* Agregado */
+    justify-content: center;
+    align-items: center; /* Agregado */
+    flex-direction: column;
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.app:hover {
+    transform: scale(1.1);
+}
+
+.app img {
+    width: 40px;
+    height: 40px;
+    display: block; 
+    margin: auto; 
+}
+
+.app span {
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo para la calculadora */
+#calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#calc-display {
+    width: 100%;
+    padding: 10px;
+    font-size: 2em;
+    text-align: right;
+    border: none;
+    border-bottom: 2px solid #333;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+}
+
+#calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+#calc-buttons button {
+    padding: 20px;
+    font-size: 1.5em;
+    border: none;
+    background: #e0e0e0;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.2s;
+}
+
+#calc-buttons button:hover {
+    background: #d0d0d0;
+}
+
+#calc-buttons button:active {
+    background: #c0c0c0;
+}
+
+#modal-body.app1 {
+    background: #f0ecc7;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#modal-body.app2 {
+    background: #8bc34a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#modal-body.app2 ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#modal-body.app2 li {
+    background: #c8e6c9;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
